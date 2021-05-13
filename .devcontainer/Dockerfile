@@ -2,7 +2,7 @@
 
 # [Choice] Ubuntu version: 1.6.0-latest, 2.0.0-latest
 ARG VARIANT="2.0.0-latest"
-FROM checkmk/check-mk-raw:${VARIANT}
+FROM checkmk/check-mk-free:${VARIANT}
 
 RUN /docker-entrypoint.sh /bin/true
 
