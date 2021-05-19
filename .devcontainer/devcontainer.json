@@ -34,5 +34,7 @@
 		"OMD_SITE": "cmk",
 		"CMK_SITE_ID": "cmk",
 		"WORKSPACE": "${containerWorkspaceFolder}"
-	}
+	},
+	// cmk instance ports
+	"forwardPorts": [5000]
 }

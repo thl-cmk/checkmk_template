@@ -14,3 +14,5 @@ ln -sv $WORKSPACE/nagios_plugins $OMD_ROOT/local/lib/nagios/plugins
 rm -rfv $OMD_ROOT/local/lib/check_mk/base/cee/plugins/bakery
 mkdir -p $OMD_ROOT/local/lib/check_mk/base/cee/plugins
 ln -sv $WORKSPACE/bakery $OMD_ROOT/local/lib/check_mk/base/cee/plugins/bakery
+
+htpasswd -b $OMD_ROOT/etc/htpasswd cmkadmin cmkadmin
