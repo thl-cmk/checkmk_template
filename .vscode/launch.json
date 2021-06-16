@@ -20,7 +20,7 @@
             "-vv",
             "--debug",
             "-n",
-            "DELL"
+            "${input:envHOST}"
             ],
             "console": "integratedTerminal",
         },
@@ -33,7 +33,7 @@
             "-vv",
             "--debug",
             "-I",
-            "DELL"
+            "${input:envHOST}"
             ],
             "console": "integratedTerminal",
         },
@@ -46,7 +46,7 @@
             "-vv",
             "--debug",
             "-II",
-            "DELL"
+            "${input:envHOST}"
             ],
             "console": "integratedTerminal",
         },
@@ -60,9 +60,20 @@
             "--debug",
             "-A",
             "-f",
-            "testhost"
+            "${input:envHOST}"
             ],
             "console": "integratedTerminal",
+        }
+    ],
+    "inputs": [
+        {
+          "id": "envHOST",
+          "type": "command",
+          "command": "extension.commandvariable.file.content",
+          "args": {
+            "fileName": "${workspaceFolder}/.env",
+            "key": "CHECKHOST"
+          }
         }
     ]
 }
