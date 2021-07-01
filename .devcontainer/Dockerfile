@@ -1,8 +1,8 @@
 # See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.155.1/containers/ubuntu/.devcontainer/base.Dockerfile
 
 # [Choice] Ubuntu version: 1.6.0-latest, 2.0.0-latest
-# actual checkmk/check-mk-free:2.0.0p4
-ARG VARIANT="2.0.0p5"
+# actual checkmk/check-mk-free:2.0.0p5
+ARG VARIANT="2.0.0p6"
 FROM checkmk/check-mk-free:${VARIANT}
 
 RUN /docker-entrypoint.sh /bin/true
