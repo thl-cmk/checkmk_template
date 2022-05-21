@@ -2,4 +2,4 @@
 .coverage
 __pycache__
 debug.log
-/temp/*.txt
+/temp/*

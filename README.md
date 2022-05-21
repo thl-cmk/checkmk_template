@@ -1,12 +1,8 @@
-# Checkmk extension for ...
-
-![build](https://github.com/jiuka/checkmk_phion/workflows/build/badge.svg)
-![flake8](https://github.com/jiuka/checkmk_phion/workflows/Lint/badge.svg)
-![pytest](https://github.com/jiuka/checkmk_phion/workflows/pytest/badge.svg)
+# Checkmk extension devcontainer template
 
 ## Description
 
-This is a template to develop Checkmk Extensions
+This is a template to develop Checkmk Extensions derived from the original made by [Marius Rieder](https://github.com/jiuka/)
 
 ## Development
 
@@ -16,17 +12,8 @@ For the best development experience use [VSCode](https://code.visualstudio.com/)
 
 The following directories in this repo are getting mapped into the Checkmk site.
 
-* `agents`, `checkman`, `checks`, `doc`, `inventory`, `notifications`, `pnp-templates`, `web` are mapped into `local/share/check_mk/`
+* `agents`, `checkman`, `checks`, `doc`, `inventory`, `notifications`, `web` are mapped into `local/share/check_mk/`
 * `agent_based` is mapped to `local/lib/check_mk/base/plugins/agent_based`
 * `nagios_plugins` is mapped to `local/lib/nagios/plugins`
-
-## Continuous integration
-### Local
-
-To build the package hit `Crtl`+`Shift`+`B` to execute the build task in VSCode.
-
-`pytest` can be executed from the terminal or the test ui.
-
-### Github Workflow
-
-The provided Github Workflows run `pytest` and `flake8` in the same checkmk docker conatiner as vscode.
+* `bakery` is mapped to `local/lib/check_mk/base/cee/plugins/bakery`
+* `temp` is mapped to `local/tmp` for storing precreated agent output
