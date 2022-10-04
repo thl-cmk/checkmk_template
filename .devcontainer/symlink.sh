@@ -8,12 +8,21 @@ done;
 rm -rfv $OMD_ROOT/local/lib/check_mk/base/plugins/agent_based
 ln -sv $WORKSPACE/agent_based $OMD_ROOT/local/lib/check_mk/base/plugins/agent_based
 
+rm -rfv $OMD_ROOT/local/lib/check_mk/gui/plugins/wato/check_parameters
+ln -sv $WORKSPACE/agent_based_check_parameters $OMD_ROOT/local/lib/check_mk/gui/plugins/wato/check_parameters
+
+rm -rfv $OMD_ROOT/local/lib/check_mk/special_agents
+ln -sv $WORKSPACE/agent_based_special $OMD_ROOT/local/lib/check_mk/special_agents
+
 rm -rfv $OMD_ROOT/local/lib/nagios/plugins
 ln -sv $WORKSPACE/nagios_plugins $OMD_ROOT/local/lib/nagios/plugins
 
-rm -rfv $OMD_ROOT/local/lib/check_mk/base/cee/plugins/bakery
 mkdir -p $OMD_ROOT/local/lib/check_mk/base/cee/plugins
+rm -rfv $OMD_ROOT/local/lib/check_mk/base/cee/plugins/bakery
 ln -sv $WORKSPACE/bakery $OMD_ROOT/local/lib/check_mk/base/cee/plugins/bakery
+
+rm -rfv $OMD_ROOT/local/tmp
 ln -sv $WORKSPACE/temp $OMD_ROOT/local/tmp
+cp $OMD_ROOT/share/check_mk/agents/plugins/mk_inventory.linux /usr/lib/check_mk_agent/plugins/
 
 htpasswd -b $OMD_ROOT/etc/htpasswd cmkadmin cmkadmin
