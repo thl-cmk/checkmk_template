@@ -1,13 +1,8 @@
-# See here for image contents: https://github.com/microsoft/vscode-dev-containers/tree/v0.155.1/containers/ubuntu/.devcontainer/base.Dockerfile
-
-# [Choice] Ubuntu version: 1.6.0-latest, 2.0.0-latest
-# actual checkmk/check-mk-free:2.0.0p5
-ARG VARIANT="2.1.0p13"
+ARG VARIANT
 FROM checkmk/check-mk-free:${VARIANT}
 
 RUN /docker-entrypoint.sh /bin/true
 
-# [Optional] Uncomment this section to install additional OS packages.
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
     && apt-get -y install --no-install-recommends nodejs gcc
 
