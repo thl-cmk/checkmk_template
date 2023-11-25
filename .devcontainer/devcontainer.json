@@ -4,7 +4,7 @@
     "name": "Checkmk",
     "build": {
         "dockerfile": "Dockerfile",
-        "args": { "VARIANT": "2.1.0p30" }
+        "args": { "VARIANT": "2.2.0-latest" }
     },
 
     "customizations": {
@@ -13,6 +13,14 @@
             "extensions": [
                 "ms-python.python",
                 "ms-python.flake8",
+                "ms-python.autopep8",
+                "ms-python.isort",
+                "ms-python.pylint",
+                "ms-python.mypy-type-checker",
+                "ms-python.flake8",
+                "ms-azuretools.vscode-docker",
+                "mikoz.black-py",
+                "eeyore.yapf",
                 "littlefoxteam.vscode-python-test-adapter",
                 "rioj7.command-variable"
             ],
